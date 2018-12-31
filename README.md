@@ -4,6 +4,9 @@
 
 [![NPM](https://img.shields.io/npm/v/react-jsgantt.svg)](https://www.npmjs.com/package/react-jsgantt) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+
+![Demo Image](/example/demo.gif)
+
 ## Install
 
 ```bash
