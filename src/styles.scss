@@ -1,0 +1,11 @@
+/* add css styles here (optional) */
+:global {
+  @import "~jsgantt-improved/dist/jsgantt.css";
+}
+
+.test {
+  display: inline-block;
+  margin: 2em auto;
+  border: 2px solid #000;
+  font-size: 2em;
+}
