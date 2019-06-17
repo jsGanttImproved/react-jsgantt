@@ -21,8 +21,7 @@
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
-    "npmpublish": "npm run build && npm run publish"
-  
+    "publishnpm": "npm run build && npm publish"
   },
   "dependencies": {
     "jsgantt-improved": "^2.2.4",
