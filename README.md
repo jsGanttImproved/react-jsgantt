@@ -60,6 +60,21 @@ class Example extends React.Component {
 }
 ```
 
+## Developer Guide
+
+Fork this project and following the instructions below:
+
+```sh
+npm install
+cd example
+npm install
+
+```
+to run the demo
+npm start in the root folder, and npm start in the example folder
+the site will be at: localhost:3000
+
+
 ## License
 
 MIT © [mariohmol](https://github.com/mariohmol)
