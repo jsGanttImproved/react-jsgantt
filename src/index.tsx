@@ -14,7 +14,7 @@ export type Props = {
 export default class JSGanttComponent extends React.Component<Props> {
   public id = 'reactgantteditor' + Math.floor(Math.random() * 1000000);
   public editor: any;
-  options = {};
+  options: any;
   public optionsChanged = false;
 
   componentDidMount() {
@@ -29,12 +29,15 @@ export default class JSGanttComponent extends React.Component<Props> {
     const { GanttChart } = jsantt.default;
     const g = this.editor = new GanttChart(document.getElementById(this.id), 'week');
     let optionsBefore = this.options || this.props.options;
-    if (!this.optionsChanged && this.editor) {
+
+    if (!this.optionsChanged && this.editor && this.editor.options) {
       optionsBefore = this.editor.options;
     }
 
     if (g.getDivId() != null) {
+
       g.setOptions({
+
         vCaptionType: 'Complete',  // Set to Show Caption : None,Caption,Resource,Duration,Complete,
         vQuarterColWidth: 36,
         vDateTaskDisplayFormat: 'day dd month yyyy', // Shown in tool tip box
@@ -43,6 +46,7 @@ export default class JSGanttComponent extends React.Component<Props> {
         vShowTaskInfoLink: 1, // Show link in tool tip (0/1)
         vShowEndWeekDate: 0,  // Show/Hide the date for the last day of the week in header for
         vUseSingleCell: 10000,
+        //vDebug: true,
         // Even with setUseSingleCell using Hour format on such a large chart can cause issues in some browsers
         vFormatArr: ['Day', 'Week', 'Month', 'Quarter'],
         ...optionsBefore
