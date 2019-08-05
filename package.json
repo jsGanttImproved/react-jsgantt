@@ -1,6 +1,6 @@
 {
   "name": "react-jsgantt",
-  "version": "2.2.0",
+  "version": "2.4.3",
   "description": "React JS Gantt",
   "author": "mariohmol",
   "license": "MIT",
@@ -21,10 +21,10 @@
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
-    "publishnpm": "npm run build && npm publish"
+    "publish-npm": "npm run build && npm publish"
   },
   "dependencies": {
-    "jsgantt-improved": "^2.2.4",
+    "jsgantt-improved": "^2.4.3",
     "node-sass": "^4.11.0"
   },
   "peerDependencies": {
