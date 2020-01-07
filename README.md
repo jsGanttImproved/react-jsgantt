@@ -65,6 +65,7 @@ class Example extends React.Component {
 Fork this project and following the instructions below:
 
 ```sh
+npm i -g rollup
 npm install
 cd example
 npm install
