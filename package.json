@@ -24,7 +24,7 @@
     "publish-npm": "npm run build && npm publish"
   },
   "dependencies": {
-    "jsgantt-improved": "^2.4.3",
+    "jsgantt-improved": "^2.5.5",
     "node-sass": "^4.11.0"
   },
   "peerDependencies": {
