@@ -2,9 +2,9 @@
  * @class JSGanttComponent
  */
 import * as React from 'react'
-import * as JSGantt from 'jsgantt-improved';
 // import '../node_modules/jsgantt-improved/dist/jsgantt.css';
 import './styles.scss';
+const JSGantt = require('jsgantt-improved');
 
 export type Props = {
   data: Array<any>,
