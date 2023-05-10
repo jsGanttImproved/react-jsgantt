@@ -7,6 +7,9 @@
 
 ![Demo Image](/example/demo.gif)
 
+You can see a live working example here:
+* https://stackblitz.com/edit/react-jsgantt
+
 ## Install
 
 ```bash
