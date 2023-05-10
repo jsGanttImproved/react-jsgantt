@@ -16,11 +16,13 @@ export default class JSGanttComponent extends React.Component<Props> {
   public editor: any;
   options: any;
   public optionsChanged = false;
+  props: any;
 
   componentDidMount() {
     this.makeChart();
   }
   componentDidUpdate() {
+    this.options = this.props.options;
     this.makeChart();
   }
 
@@ -29,6 +31,10 @@ export default class JSGanttComponent extends React.Component<Props> {
     const { GanttChart } = jsantt.default;
     const g = this.editor = new GanttChart(document.getElementById(this.id), 'week');
     let optionsBefore = this.options || this.props.options;
+
+    if (this.props.onCreate) {
+      this.props.onCreate(this.editor);
+    }
 
     if (!this.optionsChanged && this.editor && this.editor.options) {
       optionsBefore = this.editor.options;

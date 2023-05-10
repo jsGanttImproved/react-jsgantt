@@ -20,14 +20,11 @@ npm install --save react-jsgantt
 
 ```tsx
 import * as React from 'react'
-
 import JSGantt from 'react-jsgantt'
 
-class Example extends React.Component {
+function Example() {
 
-  constructor(props){
-    super(props);
-    this.data = [{
+    const data = [{
       'pID': 1,
       'pName': 'Define Chart API v2',
       'pStart': '',
@@ -45,21 +42,34 @@ class Example extends React.Component {
       'pNotes': 'Some Notes text'
     }];
 
-    this.editorOptions = {
+    const editorOptions = {
       vCaptionType: 'Complete',  // Set to Show Caption : None,Caption,Resource,Duration,Complete,
       vQuarterColWidth: 36,
       vDateTaskDisplayFormat: 'day dd month yyyy', // Shown in tool tip box
       vDayMajorDateDisplayFormat: 'mon yyyy - Week ww', // Set format to display dates in the "Major" header of the "Day" view
-      vWeekMinorDateDisplayFormat: 'dd mon'
-    }]
-  }
-      
+      vWeekMinorDateDisplayFormat: 'dd mon',
+    }
 
-  render () {
+    const getData = () => {
+      const changedGantt = editor.getList();
+      console.log(changedGantt[0].getName());
+    };
+
+    const onCreate = (editorcreated) => {
+      console.log(editorcreated, '------');
+      editor = editorcreated;
+    };
+      
     return (
-       <JSGanttComponent data={this.data} options={this.editorOptions} />
-    )
-  }
+        <div>
+            <button click={getData}>Get Data</button>
+
+        <JSGanttComponent data={data} 
+            options={editorOptions} 
+            onCreate={onCreate}
+            />
+        </div>
+    );
 }
 ```
 
