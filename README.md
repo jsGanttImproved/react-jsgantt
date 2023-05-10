@@ -72,7 +72,9 @@ npm i -g rollup
 npm install
 cd example
 npm install
-
+# we need to install python2
+sudo apt install python2
+# or if you have windows, change your path to point to python2
 ```
 to run the demo
 npm start in the root folder, and npm start in the example folder
