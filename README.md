@@ -4,8 +4,11 @@
 
 [![NPM](https://img.shields.io/npm/v/react-jsgantt.svg)](https://www.npmjs.com/package/react-jsgantt) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+A fully featured gantt chart component built entirely in Javascript, CSS and AJAX. It is lightweight and there is no need of external libraries or additional images.
 
 ![Demo Image](/example/demo.gif)
+
+This is a React module for the [jsgantt-improved](https://github.com/jsGanttImproved/jsgantt-improved) library.
 
 You can see a live working example here:
 * https://stackblitz.com/edit/react-jsgantt
